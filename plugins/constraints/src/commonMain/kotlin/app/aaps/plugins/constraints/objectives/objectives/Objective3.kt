@@ -28,7 +28,7 @@ class Objective3(
 ) : Objective(preferences, rh, dateUtil, durationText, "openloop", ConstraintsStrings.objectives_openloop_objective, ConstraintsStrings.objectives_openloop_gate) {
 
     init {
-        tasks.add(MinimumDurationTask(this, T.days(2).msecs()))
+        tasks.add(MinimumDurationTask(this, T.days(7).msecs()))
         tasks.add(
             object : Task(this, ConstraintsStrings.objectives_manualenacts) {
                 override suspend fun isCompleted(): Boolean {
